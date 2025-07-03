@@ -1,2 +1,2 @@
 # sigma_by_harry
- source code for sigma web dev
+Practice code for sigma web dev
