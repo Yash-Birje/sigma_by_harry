@@ -1,1 +1,1 @@
-alert("Hello, world!");
+alert("Welcome to sigma course")
