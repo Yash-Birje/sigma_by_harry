@@ -1,0 +1,14 @@
+div p{
+    background-color: blue;
+    color: white;
+}
+div p:first-child{
+    background-color: yellow;
+    color: red;
+}
+div{
+    background-color: green;
+}
+body{
+    background-color: black;
+}
