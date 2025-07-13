@@ -1,11 +1,11 @@
 import numpy as np
 
-def calculate(lst):
-    
-    if(len(lst) != 9):
+def calculate(list):
+
+    if(len(list) != 9):
         raise ValueError("List must contain nine numbers.")#raise an error if the list does not contain 9 numbers
-    
-    list2 = np.array(lst).reshape(3, 3) 
+
+    list2 = np.array(list).reshape(3, 3) 
     calculations = {}
     operations = {
         'mean': np.mean,
