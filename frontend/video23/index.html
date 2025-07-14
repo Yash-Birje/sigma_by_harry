@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overflow Property</title>
+    <title>CSS Display Properties</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         .box {
-            width: 40vw;
-            height: 20vh;
-            overflow: auto;
-            border: 1px solid black;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            border: 2px solid black;
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
-
 <body>
-    <div class="box">
-        <p>This is a box with some text inside it. The text is long enough to overflow the box, which will demonstrate
-            the overflow property in CSS.</p>
-        <p>more text that will overflow the box and show how the overflow property works in CSS.</p>
-        <br><br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quasi eligendi dolorum quod, minus
-            quibusdam, numquam illo ea in commodi aperiam molestias provident itaque. Sunt omnis, iusto impedit ducimus
-            odio non fugit, maiores nemo deserunt vitae voluptas sapiente, ut iure adipisci cum repudiandae possimus
-            atque sequi sed numquam. In, id.</p>
-    </div>
-</body>
 
+<div class="box">
+    I am a box with a border.
+</div>
+<div class="box">
+    I am also another box with a border.
+</div>
+</body>
 </html>

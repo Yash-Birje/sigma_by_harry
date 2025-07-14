@@ -1,18 +1,21 @@
-h1{
-    font-family: Arial, sans-serif;
-    font-style: italic;
-}  
-p{
-    font-family: 'Courier New', Courier, monospace;
-    font-style: oblique;
-    color: #333;
+#red {
+    background-color: red;
+    color: white;
 }
-.lorem{
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    color: #555;
-    text-overflow: clip;
-    border: red solid 3px;
-    width: 45px;
-    overflow: hidden;
+.red {
+    background-color: yellow;
+    color: red;
+}
+p:hover{
+    color: green;
+    font-size: 20px;
+    background-color: lightblue;
+}
+div > p {
+    background-color: pink;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

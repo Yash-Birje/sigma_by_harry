@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Specificity</title>
     <link rel="stylesheet" href="style.css">
+    <title>Boxmodel in CSS</title>
 </head>
 <body>
-    <p class="class1 class2 class3">for this para there are 3 classes and the one at the end is selected</p>
-    <p class="class1" id="id1">for this para there is only one class and an id the id should take precedence</p>
-    <p id="id2" style="color: orange;">for this para there is an id and style and style attribute takes precedence</p>
-    <p>for this para the element selector takes precedence over universal</p>
-    and here the universal selector is applied to the body element
-
-    <p id="id3">so the order of precedence is inline styles > IDs > classes > elements > universal selectors
-       <br>then there is the important rule which overrides everything else
-    </p>
-    <h1>Make your pages simple and readable, don't overdo it with classes and IDs.</h1>
+    <img src="box model.png" class ="box-model" alt="Box Model">
+    <h1>Box Model in CSS</h1>
+    <div class="box">
+        <p>This is a box with padding, border, and margin.</p>
+    </div>
+    <div class = "box box1">
+        <p>This is another box with different styles.</p>
+    </div>
 </body>
 </html>

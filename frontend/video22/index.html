@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Lists</title>
-    <style> 
-        nav  ol li{
-            list-style: none;
-            padding: 0;
-            border: 2px solid blue;
-            margin: 0 10px;
-        }
-        ol{
-            display: flex;
-            padding:23px;
-        }
-    </style>
+    <title>CSS units</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ol>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ol>
-    </nav>
+    <h1>CSS Units</h1>
+    <h3>Each div below has one para and each div uses the different units</h3>
+    <div class="px">
+        <p>This div is using px (pixels) as its font size and a border of 3px</p>
+    </div>
+    <div class="em">
+        <p>This div is using em (relative to the font-size of the element) as its font size and a border of 3em</p>
+    </div>
+    <div class="rem">
+        <p>This div is using rem (relative to the font-size of the root element) as its font size and a border of 3rem</p>
+    </div>
+    <div class="percent">
+        <p>This div is using % (percentage) as its font size and a border of 30%. But it is not as commonly used for layout as the other units.</p>
+    </div>
+    <div class="vmin">
+        <p>This div is using vmin (viewport minimum) as its font size and a border of 3vmin</p>
+    </div>
+    <div class="vmax">
+        <p>This div is using vmax (viewport maximum) as its font size and a border of 3vmax</p> 
+    </div>
+    <div class="vw">
+        <p>This div is using vw (viewport width) as its font size and a border of 3vw</p>
+    </div>
+    <div class="vh">    
+        <p>This div is using vh (viewport height) as its font size and a border of 3vh</p>
+    </div>
 </body>
 </html>
