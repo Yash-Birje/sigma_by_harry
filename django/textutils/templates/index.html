@@ -6,8 +6,14 @@
     <title>Template is working</title>
 </head>
 <body>
-    This is the index page for the textutils app.
-    <br>
+    <h1>Welcome to the text analyzer.</h1>
+    <form action="/remove-punc" method = "get">
+        <textarea  name = 'text' style="width: 660px; height: 262px;margin: 0;"> 
+
+        </textarea>
+        <button type="submit">Analyze This</button>
+    </form>
+    <!-- <br>
     <a href="/about">About</a><br>  
     <a href="/remove-punc">Remove Punctuation</a><br>
     <a href="/capitalize">Capitalize</a><br>    
@@ -17,6 +23,6 @@
     <br>
     <a href="/">Go back to index</a>
     <br>
-    <p> this website is managed by {{ name }} from {{ place }}</p>
+    <p> this website is managed by {{ name }} from {{ place }}</p> -->
 </body>
 </html>

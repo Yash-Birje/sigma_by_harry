@@ -9,6 +9,7 @@ def about(request):
     return render(request, 'about.html')
 
 def remove_punctuation(request):
+    text = request.GET.get('text','default')#get the text
     return render(request, 'remove-punc.html')
 
 def capitalize(request):
