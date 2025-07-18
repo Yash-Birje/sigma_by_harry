@@ -21,10 +21,11 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
-    path('remove-punc/', views.remove_punctuation, name='remove_punctuation'),
-    path('capitalize/', views.capitalize, name='capitalize'),
-    path('space-remover/', views.space_remover, name='space_remover'),
-    path('char-count/', views.char_count, name='char_count'),
-    path('line-remover/', views.line_remover, name='line_remover'),
+    path('analyze/',views.analyze,name='analyze')
+    # path('about/', views.about, name='about'),
+    # path('remove-punc/', views.remove_punctuation, name='remove_punctuation'),
+    # path('capitalize/', views.capitalize, name='capitalize'),
+    # path('space-remover/', views.space_remover, name='space_remover'),
+    # path('char-count/', views.char_count, name='char_count'),
+    # path('line-remover/', views.line_remover, name='line_remover'),
 ]

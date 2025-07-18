@@ -7,10 +7,11 @@
 </head>
 <body>
     <h1>Welcome to the text analyzer.</h1>
-    <form action="/remove-punc" method = "get">
+    <form action="/analyze" method = "get">
         <textarea  name = 'text' style="width: 660px; height: 262px;margin: 0;"> 
 
-        </textarea>
+        </textarea><br>
+        <input type ='checkbox' name="removepunc">Remove Punctuation<br>
         <button type="submit">Analyze This</button>
     </form>
     <!-- <br>
