@@ -4,7 +4,7 @@ import numpy as np
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = pd.read_csv("numpy/demographic/adult.data.csv", na_values=" ?")
+    df = pd.read_csv("DataAnalysisWPython/demographic/adult.data.csv", na_values=" ?")
 
     # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
     race_count = df["race"].value_counts()
