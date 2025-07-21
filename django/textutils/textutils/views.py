@@ -13,21 +13,40 @@ def analyze(request):
     text = request.GET.get('text','default')#get the text
     # print(text)
     removepunc = request.GET.get('removepunc','off')
-    # print(removepunc)
-    # analyzed = text
+    fullcaps = request.GET.get('fullcaps','off')
     punctuations = list(string.punctuation)  # List of all punctuation marks
+    newlineremover = request.GET.get('newlineremover','off')
+    charcount = request.GET.get('charcount','off')
 
     if removepunc == 'on':
         analyzed = ''.join(char for char in text if char not in punctuations)
-    else:
-        analyzed = text
-        
-    params ={
+        params ={
         'purpose':'Removed Punctuation',
         'analyzedText':analyzed
     }
-    return render(request, 'analyze.html',params)
+    elif fullcaps =='on':
+        analyzed = ''.join(char.upper() for char in text)
+        params ={
+        'purpose':'Changed to Uppercase',
+        'analyzedText':analyzed
+    }
+    elif newlineremover=='on':
+        analyzed = ''.join(char for char in text if char!='/n')
+        params ={
+        'purpose':'Removed new lines(made it contiguous)',
+        'analyzedText':analyzed
+    }
+    elif charcount=='on':
+        text2 = ''.join(char for char in text if char!='/n' or char!=' ')
+        analyzed = f' There are {len(text2)-13} characters in the text you gave'
+        params ={
+        'purpose':'Finding out number of characters in text',
+        'analyzedText':analyzed
+    }
+    else:
+        analyzed = text
 
+    return render(request, 'analyze.html',params)
 # def about(request):
 #     return render(request, 'about.html')
 

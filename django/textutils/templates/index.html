@@ -8,22 +8,16 @@
 <body>
     <h1>Welcome to the text analyzer.</h1>
     <form action="/analyze" method = "get">
-        <textarea  name = 'text' style="width: 660px; height: 262px;margin: 0;"> 
+        <textarea  name = 'text' style="width: 400px; height: 200px;margin: 0;"> 
 
         </textarea><br>
+        <p>Please pick only one or only the topmost will be applied</p>
         <input type ='checkbox' name="removepunc">Remove Punctuation<br>
+        <input type ="checkbox" name="fullcaps">Upper Case<br>
+        <input type ='checkbox' name = 'newlineremover'>New Line Remover<br>
+        <input type = 'checkbox' name = 'charcount'>get character count<br>
         <button type="submit">Analyze This</button>
     </form>
-    <!-- <br>
-    <a href="/about">About</a><br>  
-    <a href="/remove-punc">Remove Punctuation</a><br>
-    <a href="/capitalize">Capitalize</a><br>    
-    <a href="/space-remover">Space Remover</a><br>
-    <a href="/char-count">Character Count</a><br>
-    <a href="/line-remover">Line Remover</a><br>
-    <br>
-    <a href="/">Go back to index</a>
-    <br>
-    <p> this website is managed by {{ name }} from {{ place }}</p> -->
+    <!-- <p> this website is managed by {{ name }} from {{ place }}</p> -->  
 </body>
 </html>
