@@ -12,39 +12,35 @@ def index(request):
 def analyze(request):
     text = request.GET.get('text','default')#get the text
     # print(text)
+    analyzed = text
+    ans = ''
     removepunc = request.GET.get('removepunc','off')
     fullcaps = request.GET.get('fullcaps','off')
     punctuations = list(string.punctuation)  # List of all punctuation marks
     newlineremover = request.GET.get('newlineremover','off')
     charcount = request.GET.get('charcount','off')
-
+    st = 'Removed Punctuation'
     if removepunc == 'on':
-        analyzed = ''.join(char for char in text if char not in punctuations)
-        params ={
-        'purpose':'Removed Punctuation',
+        analyzed = ''.join(char for char in analyzed if char not in punctuations)
+        
+    if fullcaps =='on':
+        analyzed = ''.join(char.upper() for char in analyzed)
+        st = st +','+'Changed to Uppercase'
+        
+    if newlineremover=='on':
+        analyzed = ''.join(char for char in analyzed if char!='/n')
+        st = st +','+'Removed new lines(made it contiguous)'
+        
+    if charcount=='on':
+        text2 = ''.join(char for char in analyzed if char!='/n' or char!=' ')
+        analyzed = analyzed + f' & There are {len(text2)-13} characters in the text you gave'
+        st = st+','+'Finding out number of characters in text'
+
+    params ={
+        'purpose':st,
         'analyzedText':analyzed
-    }
-    elif fullcaps =='on':
-        analyzed = ''.join(char.upper() for char in text)
-        params ={
-        'purpose':'Changed to Uppercase',
-        'analyzedText':analyzed
-    }
-    elif newlineremover=='on':
-        analyzed = ''.join(char for char in text if char!='/n')
-        params ={
-        'purpose':'Removed new lines(made it contiguous)',
-        'analyzedText':analyzed
-    }
-    elif charcount=='on':
-        text2 = ''.join(char for char in text if char!='/n' or char!=' ')
-        analyzed = f' There are {len(text2)-13} characters in the text you gave'
-        params ={
-        'purpose':'Finding out number of characters in text',
-        'analyzedText':analyzed
-    }
-    else:
-        analyzed = text
+    }   
+      
 
     return render(request, 'analyze.html',params)
 # def about(request):
