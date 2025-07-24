@@ -1,0 +1,29 @@
+.container {
+    border: 2px solid red;
+    display: flex;
+    /* directionn L-R is default (row) can be made U-D by (colum) 
+    cross axis perpendicular to main*/
+    height: 80vh;
+    justify-content: space-evenly;
+    /* set center horizontally */
+    align-items: center;
+    /* set center vertically  item 
+    for 1 and content for many ig
+    (i think it's a wrong assumption) */
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+}
+
+.item {
+    height: 92px;
+    width: 92px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    margin: 4px;
+    color: white;
+}
+.order1{
+    order: 1;
+    /* flex-grow: 2; */
+}
