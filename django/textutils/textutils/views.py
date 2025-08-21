@@ -19,22 +19,23 @@ def analyze(request):
     punctuations = list(string.punctuation)  # List of all punctuation marks
     newlineremover = request.GET.get('newlineremover','off')
     charcount = request.GET.get('charcount','off')
-    st = 'Removed Punctuation'
+    st = ''
     if removepunc == 'on':
         analyzed = ''.join(char for char in analyzed if char not in punctuations)
-        
+        st = st + ',' + 'Removed Punctuation' if st!='' else 'Removed Punctuation'
+
     if fullcaps =='on':
         analyzed = ''.join(char.upper() for char in analyzed)
-        st = st +','+'Changed to Uppercase'
-        
+        st = st + ',' + 'Changed to Uppercase' if st!='' else 'Changed to Uppercase'
+
     if newlineremover=='on':
         analyzed = ''.join(char for char in analyzed if char!='/n')
-        st = st +','+'Removed new lines(made it contiguous)'
-        
+        st = st + ',' + 'Removed new line(made it contiguous)' if st!='' else 'Removed new line(made it contiguous)'
+
     if charcount=='on':
         text2 = ''.join(char for char in analyzed if char!='/n' or char!=' ')
-        analyzed = analyzed + f' & There are {len(text2)-13} characters in the text you gave'
-        st = st+','+'Finding out number of characters in text'
+        analyzed = analyzed + f' & There are {len(text2)} characters in the text you gave'
+        st = st + ',' + 'Found length' if st!='' else 'Found length'
 
     params ={
         'purpose':st,
