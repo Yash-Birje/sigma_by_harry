@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template is working</title>
+</head>
+<body>
+    <h1>Welcome to the text analyzer.</h1>
+    <form action="/analyze" method = "get">
+        <textarea  name = 'text' style="width: 400px; height: 200px;margin: 0;"> 
+
+        </textarea><br>
+        <p>Please pick only one or only the topmost will be applied</p>
+        <input type ='checkbox' name="removepunc">Remove Punctuation<br>
+        <input type ="checkbox" name="fullcaps">Upper Case<br>
+        <input type ='checkbox' name = 'newlineremover'>New Line Remover<br>
+        <input type = 'checkbox' name = 'charcount'>get character count<br>
+        <button type="submit">Analyze This</button>
+    </form>
+    <!-- <p> this website is managed by {{ name }} from {{ place }}</p> -->  
+</body>
+</html>

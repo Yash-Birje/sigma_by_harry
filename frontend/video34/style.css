@@ -1,0 +1,11 @@
+.cards{
+    border: 2px solid black;
+}
+.card2{
+    clear:left;
+}
+img{
+    float: left;
+    height: 200px;
+    width:320px;
+}

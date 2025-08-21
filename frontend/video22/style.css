@@ -1,0 +1,35 @@
+.px {
+    font-size: 16px;
+    border: 3px solid black;
+}
+
+.em {
+    font-size: 1.5em;
+    border: 3em solid black;
+}
+
+.rem {
+    font-size: 2rem;
+    border: 3rem solid black;
+}
+
+.percent {
+    font-size: 150%;
+    border: 30% solid black;
+}
+.vh {
+    font-size: 10vh;
+    border: 3vh solid black;
+}
+.vw {
+    font-size: 10vw;
+    border: 3vw solid black;
+}
+.vmin {
+    font-size: 10vmin;
+    border: 3vmin solid black;
+}
+.vmax {
+    font-size: 10vmax;
+    border: 3vmax solid black;
+}

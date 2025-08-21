@@ -1,0 +1,2 @@
+This text is directly shown from one.txt file on the server
+yooooooo

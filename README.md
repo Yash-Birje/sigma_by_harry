@@ -1,2 +1,2 @@
-# sigma_by_harry
-Practice code for sigma web dev
+# Whatever that I've learned
+Practice code for stuff i created
