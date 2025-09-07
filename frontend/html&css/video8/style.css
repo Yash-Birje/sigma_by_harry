@@ -1,0 +1,15 @@
+p{
+    background-color: bisque  
+}
+a{
+    background-color: lightblue;
+    color: black;
+    text-decoration: none;
+}
+div{
+    background-color: lightgreen;
+    padding: 10px;
+}
+span{
+    background-color: lightcoral;
+}

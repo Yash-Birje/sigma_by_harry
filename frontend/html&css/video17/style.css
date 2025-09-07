@@ -1,0 +1,21 @@
+#red {
+    background-color: red;
+    color: white;
+}
+.red {
+    background-color: yellow;
+    color: red;
+}
+p:hover{
+    color: green;
+    font-size: 20px;
+    background-color: lightblue;
+}
+div > p {
+    background-color: pink;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

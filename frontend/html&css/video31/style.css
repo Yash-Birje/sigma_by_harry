@@ -1,0 +1,14 @@
+/* @media not|only mediatype and conditio
+css query ig 
+*/
+/*
+so basically if block of css
+*/
+body{
+    background-color: yellow;
+}
+@media only screen and (max-width:455px){
+    body{
+        background-color: blue;
+    }
+}
