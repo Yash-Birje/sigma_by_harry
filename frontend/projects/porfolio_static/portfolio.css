@@ -23,10 +23,10 @@ a{
 
 nav ul{
   display:flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-evenly;
   background-color: lightgrey;
-  padding: 10px;
+  padding: 12px;
   list-style-type: none;
 }
 .project{
@@ -39,7 +39,16 @@ nav ul{
 	animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 }
-
+h1{
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  .slide-fwd-center {
+  animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+}
 #contact{
   margin: 20px;
   padding: 10px;
@@ -50,7 +59,7 @@ nav ul{
   animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 }
-form div{
+form label{
   margin: 10px;
   align-items: center;
   justify-content: center;
