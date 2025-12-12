@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Spam Classifier(not working coz imbalanced data)</title>
+  </head>
+  <body>
+    <h2>Spam classifier</h2>
+    <form method="POST">
+      <input type="text" name="message" placeholder="Type message" style="width:400px;">
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if result is not none %}
+      <h3>Result: {{ result }}</h3>
+      {% if confidence %}
+        <p>Confidence: {{ '%.2f'|format(confidence) }}</p>
+      {% endif %}
+      <p>Input: {{ input_text }}</p>
+    {% endif %}
+  </body>
+</html>
