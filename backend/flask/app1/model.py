@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 import joblib
-
+from imblearn.over_sampling import SMOTE
 
 filepath = "./dataset/spam.csv"
 df = pd.read_csv(filepath)
@@ -33,8 +33,11 @@ X = vect.fit_transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 
+smote = SMOTE(sampling_strategy='minority')
+X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
+
 model = LogisticRegression()
-model.fit(X_train, y_train)
+model.fit(X_train_res, y_train_res)
 
 preds = model.predict(X_test)
 print(classification_report(y_test, preds))
