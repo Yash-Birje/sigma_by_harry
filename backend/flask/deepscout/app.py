@@ -1,18 +1,23 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from services.article_fetcher import fetch_article_text
-from services.analyzer import summarize
+from services.analyzer import analyze
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    url = "https://en.wikipedia.org/wiki/Machine_learning"
-    try:
-        text = fetch_article_text(url)
-        summary = summarize(text)
-        return f"<pre>{summary}</pre>"  # show first 1000 chars only
-    except Exception as e:
-        return f"Error: {str(e)}"
+@app.route("/", methods=["GET", "POST"])
+def index():
+    result = None
+    error = None
+
+    if request.method == "POST":
+        url = request.form.get("url")
+        try:
+            text = fetch_article_text(url)
+            result = analyze(text)
+        except Exception as e:
+            error = str(e)
+
+    return render_template("index.html", result=result, error=error)
 
 if __name__ == "__main__":
     app.run(debug=True)

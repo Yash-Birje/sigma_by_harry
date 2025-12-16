@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DeepScout</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DeepScout</h1>
+        <p>One-click research assistant</p>
+
+        <form method="POST">
+            <input
+                type="url"
+                name="url"
+                placeholder="Paste article URL here..."
+                required
+            />
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if result %}
+            <div class="results">
+                <h2>Summary</h2>
+                <pre>{{ result.summary }}</pre>
+
+                <h2>Topics</h2>
+                <p>{{ result.topics }}</p>
+
+                <h2>Sentiment</h2>
+                <p class="sentiment {{ result.sentiment|lower }}">
+                    {{ result.sentiment[-8:] }}
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
