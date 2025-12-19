@@ -11,7 +11,7 @@ def analyze(text: str) -> dict:
     topics_prompt = (
         "Extract exactly 5 key topic tags from the following article. "
         "Return them as a comma-separated list. "
-        "Do not explain.\n\n"
+        "Do not explain nor add reasoning.\n\n"
         f"{text}"
     )
     sentiment_prompt = (

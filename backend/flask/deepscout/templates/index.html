@@ -34,7 +34,7 @@
 
                 <h2>Sentiment</h2>
                 <p class="sentiment {{ result.sentiment|lower }}">
-                    {{ result.sentiment[-8:] }}
+                    {{ result.sentiment|lower }}
                 </p>
             </div>
         {% endif %}
