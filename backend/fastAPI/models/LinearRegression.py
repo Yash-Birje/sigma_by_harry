@@ -59,3 +59,5 @@ df = pd.DataFrame({
 })
 
 w, b = LinearRegression(df, "y", learning_rate=0.0001, iterations=5000, lambda_=0.01, regularization="L1")
+with open("./weights/weights_LinearRegression.json", "w") as f:
+  f.write(f"weights: {w.tolist()}, bias: {b}")
